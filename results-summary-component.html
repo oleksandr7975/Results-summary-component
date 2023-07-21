@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Results summary component</title>
+
+  <style>
+    body
+    {
+      font-family: 'Hanken Grotesk Regular', 'Hanken Grotesk Bold', 'Hanken Grotesk ExtraBold', 'Hanken Grotesk Medium';
+    }
+
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+
+
+    .result {
+      background: linear-gradient(to bottom, rgb(88, 88, 185), rgb(3, 3, 196));
+      color: antiquewhite;
+      position: absolute;
+      left: 30%;
+      top: 20%;
+      width: 20%;
+      height: 50%;
+      text-align: center;
+      border-radius: 25px;
+    }
+    .description{
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    .summary {
+      position:absolute;
+      right: 28%;
+      top: 20%;
+      width: 20%;
+      height: 50%;
+      text-align: left;
+    }
+    .symbol {
+      margin-right: 10px;
+    }
+    .skill_reaction {
+      color:rgb(255, 0, 0);
+      padding-right: 50px;
+    }
+    .skill_memory {
+      color: yellow;
+      padding-right: 51px;
+    }
+    .skill_verbal {
+      color: rgb(0, 225, 255);
+      padding-right: 65px;
+    }
+    .skill_visual {
+      color: blue;
+      padding-right: 67px;
+    }
+    .skill_item {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    .max_number {
+      color: rgb(165, 166, 167);
+    }
+    button{
+      background-color: rgb(31, 52, 94);
+      color: antiquewhite;
+      padding: 12px 74px;
+      border-radius: 100px;
+      border: 0cm;
+      margin-top: 20px;
+    }
+    button:hover:focus:active{
+      background: linear-gradient(to bottom, #4a4cd6, #3a3dd8);
+    }
+    .circle {
+      background-color: #1e21c2;
+      border-radius: 50%;
+      height: 150px; 
+      width: 150px;
+      display: inline-block;
+    }
+    .inside_circle {
+      padding-top: 15%;
+    }
+    .result_number {
+      font-size: 3rem;
+    }
+    .of100 {
+      color: rgb(118, 121, 121);
+    }
+    h3 {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+  @media(max-width: 375px){
+    .result{
+      position: absolute;
+      left: 0%;
+      top: 0%;
+      width: 100%;
+      height: 50%;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+    }
+    h3 {
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+    .circle {
+      background-color: #1e21c2;
+      border-radius: 50%;
+      height: 133px; 
+      width: 133px;
+      display: inline-block;
+    }
+    .word_great{
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+    .summary{
+      position:absolute;
+      right: 0%;
+      top: 50%;
+      width: 100%;
+      height: 50%;
+      text-align: left;
+    }
+    .word_summary{
+      padding-left: 20px;
+    }
+     .skill_item{
+      margin-top: 5px;
+      margin-bottom: 5px; 
+    }
+   
+    .skill_reaction{
+      padding-left: 5px;
+      margin-right: 60px;
+    }
+    .skill_memory{
+      padding-left: 5px;
+      margin-right: 60px;
+    }
+    .skill_verbal{
+      padding-left: 5px;
+      margin-right: 60px;
+    }
+    .skill_visual{
+      padding-left: 5px;
+      margin-right: 60px;
+  }
+  }
+  .symbol{
+    margin-left: 40px;
+  }
+  button{
+    width: 90%;
+    margin-left: 5%;
+    height: 50px;
+    font-size: 100%;
+  }
+
+  </style>
+</head>
+<body>
+  <!--LEFT SIDE-->
+  <div class="result">
+    <h3>
+      Your Result
+    </h3>
+    <div class="circle">
+      <p class="inside_circle">
+        <span class="result_number">
+          <b>76</b>
+        </span>
+        <br>
+        <span class="of100">
+          of 100
+        </span>
+      </p>
+    </div>
+    <h2 class="word_great">
+      Great
+    </h2>
+    <p class="description">
+      You scored higher than 65% of the people who have taken these tests.
+    </p>
+  </div>
+  <!--RIGHT SIDE-->
+  <div class="summary"> 
+    <h2 class="word_summary">
+      Summary
+    </h2>
+    <p class="skill_item">
+      <img class="symbol" src="assets/images/icon-reaction.svg" alt="">
+      <span class="skill_reaction"><b>Reaction</b></span>
+      <b>80</b> 
+      <span class="max_number">/ 100</span>
+    </p>
+    <p class="skill_item">
+      <img class="symbol" src="assets/images/icon-memory.svg" alt="">
+      <span class="skill_memory"><b>Memory</b></span>
+      <b>92</b>
+      <span class="max_number">/ 100</span>
+    </p>
+    <p class="skill_item"> 
+      <img class="symbol" src="assets/images/icon-verbal.svg" alt="">
+      <span class="skill_verbal"><b>Verbal</b></span> 
+      <b>61</b>
+      <span class="max_number">/ 100</span>
+    </p>
+    <p class="skill_item">
+      <img class="symbol" src="assets/images/icon-visual.svg" alt="">
+      <span class="skill_visual"><b>Visual</b></span>
+      <b>72</b>
+      <span class="max_number">/ 100</span>
+    </p>
+    <!--BUTTON-->
+    <button>
+      Continue
+    </button>
+  </div>
+    <div class="attribution">
+    Coded by <a href="https://www.linkedin.com/in/oleksandr-babich/" target="_blank">babich o</a>.
+  </div>
+</body>
+</html>
